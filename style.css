@@ -1,0 +1,25 @@
+h2{
+    color:aliceblue;
+    background-color:darkgoldenrod;
+}
+    /*universal selector*/
+    *{
+        background-color: aquamarine;
+    }
+    /*id selector*/
+    #a{
+        color:rgb(255, 3, 3);
+    }
+    #b{
+        color:rgb(255, 3, 171);
+    }
+    #c{
+        color:rgb(41, 3, 255);
+    }
+    /*class selector*/
+    p.x{
+        color:darkcyan;
+    }
+    p.z{
+        color:brown;
+    }
