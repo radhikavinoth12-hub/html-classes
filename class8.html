@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Background effects
+        </title>
+        <style>
+            #a{
+                 background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjrOBi-iLK2cHQBnbQVkAg__nCHM3LU4Tk2A&s");
+                 background-repeat:no-repeat;
+                 background-size:cover;
+                 height:300px;
+                 width:1000px;
+
+            }
+            #alpha{
+                height:300px;
+                width:1000px;
+                background:linear-gradient(to right,darkblue, skyblue, darkred )
+            }
+
+            #beta{
+                height:300px;
+                width:1000px;
+                background:radial-gradient(red, blue, gold, silver )
+            }
+            #teamalpha{
+                height:100px;
+                width:100px;
+                background-color:crimson;
+                animation-name:example;
+                animation-duration:4s;
+
+            }
+            @keyframes example {
+                0%{background-color:crimson;}
+                25%{background-color:cornflowerblue}
+                50%{background-color:rgba(128, 226, 0, 0.486)}
+                100%{background-color:darkgoldenrod;}
+            }
+            
+            </style>
+           
+
+    </head>
+    <body>
+        <h1>
+            Background Image
+        </h1>
+        <div id="a">
+            Activity
+        </div>
+
+        <h1>
+            Linear gradient
+        </h1>
+        <div id="alpha">
+
+        </div>
+        <h1>
+            Radial Gradient
+        </h1>
+        <div id="beta">
+
+        </div>
+        <h1>
+            Animation
+        </h1>
+        <div id="teamalpha">
+
+        </div>
+    </body>
+</html>
