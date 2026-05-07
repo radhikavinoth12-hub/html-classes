@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> CSS text styling properties </title>
+
+    <style>
+        .alpha {
+            color: red;
+            font-size: 30px
+        }
+
+        .zelta {
+            color: blueviolet;
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        b {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: darkcyan;
+            border: 5px solid blueviolet;
+
+        }
+
+        #b {
+            transform: rotateX(180deg);
+
+
+        }
+
+        h2 {
+            text-decoration: line-through;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            text-decoration: underline;
+            text-transform: lowercase;
+        }
+
+        h4 {
+            text-decoration: underline overline;
+            text-transform: none;
+        }
+
+        h5 {
+            Text-decoration: overline;
+            text-transform: capitalize;
+        }
+
+        #text {
+
+            text-shadow: 2px 2px 1px #CC5500;
+
+            /* (right-offset)px (left-offset)px (fade)px color*/
+
+        }
+
+        #box {
+
+            box-shadow: 9px 9px 5px #301934;
+
+            /* (right-offset)px (left-offset)px (fade)px color*/
+
+        }
+
+        #indent {
+
+            text-indent: 50%;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>
+        Typography
+    </h1>
+    <p class="alpha">
+        Welcome to Codingal
+    </p>
+    <p class="zelta">
+        Welcome to dot to dot Theraputic services
+    </p>
+
+    <hr>
+
+    <h1>
+        Transform
+    </h1>
+
+    <p>
+        Ready to learn the rotate method.......
+    </p>
+
+    <b id="a">
+        Services
+    </b>
+    <br> <br>
+    <b id="b">
+        Services
+    </b>
+
+    <hr>
+    <h1>Text Decoration</h1>
+
+    <h2>Codingal</h2>
+    <h3>Codingal</h3>
+    <h4>Codingal</h4>
+    <h5>Codingal </h5>
+
+    <hr>
+    <h1>Text shadow, Box shadow, Text indent</h1>
+
+    <h1 id="text">We can use text-shadow to give shadow to text itself</h1>
+
+
+    <h1 id="box">Or use box-shadow to give shadow to the element</h1>
+
+    <div>
+
+        <p>This is an example of text-indent.</p>
+
+        <p id="indent">This is an example of text-indent.</p>
+
+    </div>
+</body>
+
+</html>
