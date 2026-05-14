@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Dream Room – CSS Float</title>
+  <style>
+
+/*
+1) Style the main page body.
+   a) Use `font-family` to set the text style.
+   b) Add a soft background colour.
+   c) Add padding around the page.
+   d) Remove the default page margin.
+
+2) Style the main heading.
+   a) Center-align the heading.
+   b) Add a dark brown text colour.
+   c) Add spacing below the heading.
+
+3) Style the room container.
+   a) Set a fixed width for the room.
+   b) Add a border around it.
+   c) Add padding inside the room.
+   d) Center the room using `margin: 0 auto`.
+   e) Add a light background colour.
+   f) Use `overflow: hidden` to contain floated elements.
+
+4) Style the bed section.
+   a) Set the bed width.
+   b) Add background and text colours.
+   c) Add padding and center the text.
+   d) Float it to the left.
+   e) Add right margin for spacing.
+
+5) Style the window section.
+   a) Set the window width.
+   b) Add background and text colours.
+   c) Add padding and center the text.
+   d) Float it to the right.
+   e) Add left margin for spacing.
+
+6) Style the description text.
+   a) Set the text colour.
+   b) Set a smaller font size.
+   c) Improve readability using `line-height`.
+
+7) Style the rug section.
+   a) Add background and text colours.
+   b) Add padding and center the text.
+   c) Make the text bold.
+   d) Use `clear: both` to place it below floated elements.
+   e) Add top margin for spacing.
+*/
+body{
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   background-color:aqua;
+   padding: 30px;
+   margin:0;
+}
+
+h1{
+   text-align:center;
+   color:blueviolet;
+   margin-bottom: 20px;
+}
+
+.room{
+   width:600px;
+   border: 4px solid rgb(255, 255, 255);
+   padding: 16px;
+   margin: 0 auto;
+   background-color:brown;
+   overflow: hidden;
+}
+.bed{
+   width: 160px;
+   background-color:chartreuse;
+   color:antiquewhite;
+   padding: 20px;
+   text-align: center;
+   float: left;
+   margin-right: 16px;
+}
+.window{
+   width: 100px;
+   background-color:rgb(89, 0, 255);
+   color:antiquewhite;
+   padding: 20px;
+   text-align: center;
+   float: right;
+   margin-right: 16px;
+}
+.description{
+   color:blanchedalmond;
+   font-size: 0.9em;
+   line-height: 1.6;
+}
+.rug{
+   background-color:rgb(255, 0, 0);
+   color:rgb(215, 218, 250);
+   padding: 14px;
+   text-align: center;
+   font-weight: bold;
+   clear: both;
+   margin-top: 16px;
+}
+  </style>
+</head>
+<body>
+
+  <h1>🏠 My Dream Room</h1>
+
+  <div class="room">
+
+    <div class="bed">🛏️<br>Bed</div>
+
+    <div class="window">🪟<br>Window</div>
+
+    <div class="description">
+      Welcome to my dream room! I love the way sunlight
+      comes through the window every morning. My bed is
+      super cosy with star-pattern pillows. 🌟
+    </div>
+
+    <div class="rug">🟠 Fluffy Orange Rug 🟠</div>
+
+  </div>
+
+</body>
+</html>

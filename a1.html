@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hero Trading Card – CSS Box Model</title>
+  <style>
+
+   /*
+1) Style the main page body.
+   a) Use `font-family` to set the text style.
+   b) Add a dark background colour.
+   c) Use Flexbox to center the card horizontally and vertically.
+   d) Set `min-height: 100vh` to fill the full screen height.
+   e) Remove default page margin.
+
+2) Style the card container.
+   a) Use `.card` to target the card.
+   b) Add a bright background colour.
+   c) Set the text colour to white.
+   d) Center-align the text.
+
+3) Apply box model properties to the card.
+   a) Set the card width.
+   b) Add padding inside the card.
+   c) Add a border around the card.
+   d) Add margin outside the card.
+
+4) Style the card heading.
+   a) Use `.card h2` to target headings inside the card.
+   b) Set the heading font size.
+   c) Add bottom spacing using `margin-bottom`.
+
+5) Style the card paragraph.
+   a) Use `.card p` to target paragraphs inside the card.
+   b) Set a smaller font size.
+*/
+body {
+   font-family:Arial, Helvetica, sans-serif;
+   background-color:rgb(0, 153, 255);
+   display: flex;
+   justify-content: centre;
+   align-items: center;
+   min-height: 100vh;
+   margin:0;
+}
+.card{
+   background-color:blueviolet;
+   color:antiquewhite;
+   text-align: centre;
+   width:220px;
+   padding:30px;
+   border:5px solid whitesmoke;
+   margin: 20px;
+}
+.card h2{
+   font-size: 1.3em;
+   margin-bottom: 10px;
+}
+.card p{
+   font-size: 0.9em;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>⚡ Thunder Kid</h2>
+    <p>Attack: 95</p>
+    <p>Defence: 72</p>
+    <p>Speed: 88</p>
+    <p>Special: Lightning Strike</p>
+  </div>
+
+</body>
+</html>
