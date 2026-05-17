@@ -1,75 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <title>Hero Trading Card – CSS Box Model</title>
+  <meta charset="utf-8">
+  <title>Tasty Bites – Activity 1</title>
   <style>
 
-   /*
-1) Style the main page body.
-   a) Use `font-family` to set the text style.
-   b) Add a dark background colour.
-   c) Use Flexbox to center the card horizontally and vertically.
-   d) Set `min-height: 100vh` to fill the full screen height.
-   e) Remove default page margin.
+    /* ── Page styles (already done for you) ──────────────────────── */
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff8f0;
+      padding: 50px;
+    }
 
-2) Style the card container.
-   a) Use `.card` to target the card.
-   b) Add a bright background colour.
-   c) Set the text colour to white.
-   d) Center-align the text.
+    h1    { color: #e85d04; text-align: center; }
+    h2    { color: #e85d04; margin-top: 30px; }
+    p     { color: #555; margin-bottom: 10px; }
+    small { color: #a0522d; font-size: 12px; }
 
-3) Apply box model properties to the card.
-   a) Set the card width.
-   b) Add padding inside the card.
-   c) Add a border around the card.
-   d) Add margin outside the card.
+    .compare-wrap { display: flex; gap: 30px; margin-top: 10px; }
+    .compare-col  { flex: 1; }
 
-4) Style the card heading.
-   a) Use `.card h2` to target headings inside the card.
-   b) Set the heading font size.
-   c) Add bottom spacing using `margin-bottom`.
+    /* ── Topic 3: Static Positioning ─────────────────────────────────
+       Step 1 — .menu-item is already static.
+                Static is the default — no position property is needed.
+                Elements in normal flow stack top to bottom in HTML order. */
+    .menu-item {
+      background: #ffe8d6;
+      border: 2px solid #e85d04;
+      padding: 10px 20px;
+      margin: 8px 0;
+      width: 200px;
+      /* No position property = static by default */
+    }
 
-5) Style the card paragraph.
-   a) Use `.card p` to target paragraphs inside the card.
-   b) Set a smaller font size.
-*/
-body {
-   font-family:Arial, Helvetica, sans-serif;
-   background-color:rgb(0, 153, 255);
-   display: flex;
-   justify-content: centre;
-   align-items: center;
-   min-height: 100vh;
-   margin:0;
-}
-.card{
-   background-color:blueviolet;
-   color:antiquewhite;
-   text-align: centre;
-   width:220px;
-   padding:30px;
-   border:5px solid whitesmoke;
-   margin: 20px;
-}
-.card h2{
-   font-size: 1.3em;
-   margin-bottom: 10px;
-}
-.card p{
-   font-size: 0.9em;
-}
+    .reserved {
+      border: 2px dashed #e85d04;
+      padding: 10px 20px;
+      width: 200px;
+      margin: 8px 0;
+      color: #e85d04;
+      font-size: 12px;
+      
+    }
+
+    /* ── Topic 4: Relative Positioning ───────────────────────────────
+       The Chef's Special badge should shift 40px to the right
+       of where it normally sits. Its original space stays reserved. */
+    .special-badge {
+      background: #e80404;
+      color: white;
+      padding: 10px 20px;
+      margin: 8px 0;
+      width: 200px;
+      position:relative;
+      left: 40px;
+
+    }
 
   </style>
 </head>
+
 <body>
 
-  <div class="card">
-    <h2>⚡ Thunder Kid</h2>
-    <p>Attack: 95</p>
-    <p>Defence: 72</p>
-    <p>Speed: 88</p>
-    <p>Special: Lightning Strike</p>
+ 
+<h1> Tasty Bites Menu</h1>
+
+<h2>Static Positioning (default)</h2> 
+<p>Elements sit in normal flow — one after another, top to bottom.</p>
+ <div class="menu-item">&#127829; Pizza — $8.99</div>
+  <div class="menu-item">&#127828; Burger — $6.99</div> 
+<div class="menu-item">&#127839; Sandwich — $5.49</div>
+ <h2>Relative Positioning</h2> 
+ <p>The element shifts from where it normally sits. Its original space stays reserved.</p>
+  
+  <div class="compare-wrap">
+    <div class="compare-col">
+      <small>Without relative:</small>
+      <div class="menu-item">🍕 Pizza — $8.99</div>
+      <div class="menu-item" style="background:#e85d04; color:white;">⭐ Chef's Special!</div>
+      <div class="menu-item">🥪 Sandwich — $5.49</div>
+    </div>
+    <div class="compare-col">
+      <small>With position: relative; left: 40px:</small>
+      <div class="menu-item">🍕 Pizza — $8.99</div>
+      <div class="reserved">← original space reserved</div>
+      <div class="special-badge">⭐ Chef's Special!</div>
+      <div class="menu-item">🥪 Sandwich — $5.49</div>
+    </div>
   </div>
+  
 
 </body>
+
 </html>

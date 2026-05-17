@@ -1,129 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <title>My Dream Room – CSS Float</title>
+  <meta charset="utf-8">
+  <title>SportZone – Activity 2</title>
   <style>
 
-/*
-1) Style the main page body.
-   a) Use `font-family` to set the text style.
-   b) Add a soft background colour.
-   c) Add padding around the page.
-   d) Remove the default page margin.
+    /* ── Page styles (already done for you) ──────────────────────── */
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4ff;
+      padding: 20px;
+      min-height: 1800px;
+      margin-top: 65px;
+    }
+    h1 { color: #1d4ed8; text-align: center; }
+    h2 { color: #1d4ed8; margin-top: 30px; }
+    p  { color: #555; margin-bottom: 10px; }
 
-2) Style the main heading.
-   a) Center-align the heading.
-   b) Add a dark brown text colour.
-   c) Add spacing below the heading.
+    .player-card {
+      background: white;
+      border: 2px solid #bfdbfe;
+      padding: 20px 30px;
+      text-align: center;
+      font-size: 15px;
+      border-radius: 10px;
+    }
 
-3) Style the room container.
-   a) Set a fixed width for the room.
-   b) Add a border around it.
-   c) Add padding inside the room.
-   d) Center the room using `margin: 0 auto`.
-   e) Add a light background colour.
-   f) Use `overflow: hidden` to contain floated elements.
+    .player-item {
+      background: white;
+      border: 2px solid #bfdbfe;
+      padding: 10px 20px;
+      margin: 8px 0;
+      width: 220px;
+      border-radius: 8px;
+    }
 
-4) Style the bed section.
-   a) Set the bed width.
-   b) Add background and text colours.
-   c) Add padding and center the text.
-   d) Float it to the left.
-   e) Add right margin for spacing.
+    /* ── Topic 6: Fixed Positioning ───────────────────────────────────
+       The scoreboard must stay pinned to the top of the screen
+       and stretch full width — even when the user scrolls down. */
+    .score-bar {
+      background: #1d4ed8;
+      color: white;
+      padding: 14px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      position: fixed;
+      top:0; left:0; right:0;
 
-5) Style the window section.
-   a) Set the window width.
-   b) Add background and text colours.
-   c) Add padding and center the text.
-   d) Float it to the right.
-   e) Add left margin for spacing.
+      /* Step 1 — Add: position: fixed; */
 
-6) Style the description text.
-   a) Set the text colour.
-   b) Set a smaller font size.
-   c) Improve readability using `line-height`.
+      /* Step 2 — Add: top: 0;    (Topic 8 — offset property) */
 
-7) Style the rug section.
-   a) Add background and text colours.
-   b) Add padding and center the text.
-   c) Make the text bold.
-   d) Use `clear: both` to place it below floated elements.
-   e) Add top margin for spacing.
-*/
-body{
-   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   background-color:aqua;
-   padding: 30px;
-   margin:0;
-}
+      /* Step 3 — Add: left: 0;   (Topic 8 — offset property) */
 
-h1{
-   text-align:center;
-   color:blueviolet;
-   margin-bottom: 20px;
-}
+      /* Step 4 — Add: right: 0;  (Topic 8 — offset property) */
 
-.room{
-   width:600px;
-   border: 4px solid rgb(255, 255, 255);
-   padding: 16px;
-   margin: 0 auto;
-   background-color:brown;
-   overflow: hidden;
-}
-.bed{
-   width: 160px;
-   background-color:chartreuse;
-   color:antiquewhite;
-   padding: 20px;
-   text-align: center;
-   float: left;
-   margin-right: 16px;
-}
-.window{
-   width: 100px;
-   background-color:rgb(89, 0, 255);
-   color:antiquewhite;
-   padding: 20px;
-   text-align: center;
-   float: right;
-   margin-right: 16px;
-}
-.description{
-   color:blanchedalmond;
-   font-size: 0.9em;
-   line-height: 1.6;
-}
-.rug{
-   background-color:rgb(255, 0, 0);
-   color:rgb(215, 218, 250);
-   padding: 14px;
-   text-align: center;
-   font-weight: bold;
-   clear: both;
-   margin-top: 16px;
-}
+    }
+
+    /* ── Topic 5: Absolute Positioning ────────────────────────────────
+       .player-wrapper must be a positioned parent so the badge inside
+       uses it as its anchor point — not the whole page. */
+    .player-wrapper {
+      display: inline-block;
+      margin-top: 15px;
+      position:rlative;
+
+      /* Step 5 — Add: position: relative; */
+
+    }
+
+    /* The MVP badge must be pinned to the top-right corner of the card.
+       Negative values push it outside the card boundary. */
+    .winner-badge {
+      background: #f59e0b;
+      color: white;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: bold;
+      border-radius: 20px;
+      position: absolute;
+
+      /* Step 6 — Add: position: absolute; */
+
+      /* Step 7 — Add: top: -12px;    (Topic 8 — offset property) */
+
+      /* Step 8 — Add: right: -12px;  (Topic 8 — offset property) */
+
+    }
+
+    /* ── Topic 7: Sticky Positioning ──────────────────────────────────
+       The league label should scroll with the page normally,
+       then lock just below the scoreboard when it reaches that point. */
+    .league-label {
+      background: #1d4ed8;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      margin: 20px 0 10px;
+      position:sticky;
+
+      /* Step 9 — Add: position: sticky; */
+
+      /* Step 10 — Add: top: 52px;  (Topic 8 — locks just below the fixed score bar) */
+
+    }
+
   </style>
 </head>
+
 <body>
 
-  <h1>🏠 My Dream Room</h1>
+  <div class="score-bar">sportzone live score:team A 3-2 Team B</div>
+  <!-- Step 11: Add a div with class="score-bar" — "🏆 SportZone | Live Score: Team A 3 — 2 Team B" -->
 
-  <div class="room">
+  <!-- Step 12: Add an h1 heading — "🏆 SportZone Tournament" -->
+<h1> 🏆SportZone Tournament</h1>
+  <!-- ── Topic 5: Absolute Positioning ────────────────────── -->
 
-    <div class="bed">🛏️<br>Bed</div>
+  <!-- Step 13: Add an h2 — "Absolute Positioning" -->
+<h2>Absoulute Positioning</h2>
+  <!-- Step 14: Add a p — "The MVP badge is pinned to the corner of the player card using position: absolute." -->
+<p>"The MVP badge is pinned to the corner of the player card using position: absolute."</p>
+  <!-- Step 15: Uncomment the player card below (remove the arrows around it) -->
 
-    <div class="window">🪟<br>Window</div>
-
-    <div class="description">
-      Welcome to my dream room! I love the way sunlight
-      comes through the window every morning. My bed is
-      super cosy with star-pattern pillows. 🌟
-    </div>
-
-    <div class="rug">🟠 Fluffy Orange Rug 🟠</div>
-
+  
+  <div class="player-wrapper">
+    <div class="player-card">⚽ Alex Johnson<br>Striker — 12 Goals</div>
+    <div class="winner-badge">🏆 MVP</div>
   </div>
+  
 
-</body>
+  <!-- ── Topic 6: Fixed Positioning ───────────────────────── -->
+
+  <!-- Step 16: Add an h2 — "Fixed Positioning" -->
+<h2>Fixed postioning</h2>
+  <!-- Step 17: Add a p — "The scoreboard uses position: fixed. Scroll down — it always stays visible!" -->
+
+  <!-- ── Topic 7: Sticky Positioning ──────────────────────── -->
+
+  <!-- Step 18: Add an h2 — "Sticky Positioning" -->
+
+  <!-- Step 19: Add a p — "The league label scrolls with the page, then sticks just below the scoreboard." -->
+<p>The league label scrolls with the page, then sticks just below the scoreboard.</p>
+  <!-- Step 20: Uncomment the player list below (remove the arrows around it) -->
+
+
+  <div class="league-label">🏆 Premier League Players</div>
+  <div class="player-item">⚽ Alex Johnson — 12 Goals</div>
+  <div class="player-item">⚽ Sam Rivera — 10 Goals</div>
+  <div class="player-item">⚽ Jordan Lee — 9 Goals</div>
+  <div class="player-item">⚽ Casey Kim — 8 Goals</div>
+  <div class="player-item">⚽ Morgan Chen — 7 Goals</div>
+  <div class="player-item">⚽ Riley Park — 6 Goals</div>
+  
+
+  <!-- ── Topic 8: top, right, bottom, left ─────────────────── -->
+
+  <!-- Step 21: Add an h2 — "top, right, bottom, left" -->
+<h2>top, right, bottom, left</h2>
+  <!-- Step 22: Add a p — "These offset properties control exact placement. top · right · bottom · left" -->
+
+<p>These control exactly where a positioned element is placed. Try changing the values on <strong>.winner-badge</strong> above!</p>
+
+<p>top — down from top &nbsp;|&nbsp; right — left from right &nbsp;|&nbsp; bottom — up from bottom &nbsp;|&nbsp; left — right from left</p>
+
 </html>
