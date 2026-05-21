@@ -1,0 +1,71 @@
+<!--
+1) Start the HTML document with `<!DOCTYPE html>` to define an HTML5 page.
+
+2) Open the `<html>` tag to wrap the entire webpage.
+
+3) Inside the `<head>` section:
+   a) Set the page title using `<title>Bootstrap Grid System</title>`.
+   b) Add `<meta charset="utf-8">` to support special characters.
+   c) Add the viewport meta tag so the layout works well on mobile devices.
+   d) Link Bootstrap 4 CSS using the `<link rel="stylesheet" ...>` tag.
+      (Bootstrap CSS provides the grid system: container, row, col, etc.)
+   e) Add Bootstrap JS using the `<script ...>` tag.
+      (Note: the grid layout works with CSS only; JS is mainly for Bootstrap components like modals.)
+
+4) Add internal CSS inside `<style>`:
+   a) Target `.col` to make the grid visible for learning:
+      - `text-align: center;` centers text inside each column.
+      - `border: 1px solid black;` draws a border around each column.
+
+5) Inside the `<body>` section:
+   a) Add a heading `<h3>` to label the example ("Equal width column grid").
+
+6) Create a Bootstrap container using `<div class="container">`:
+   a) `container` provides a centered layout with padding on the left and right.
+
+7) Inside the container, create a row using `<div class="row">`:
+   a) `row` is used to hold columns and align them horizontally.
+
+8) Inside the row, create three equal-width columns using `<div class="col">`:
+   a) Bootstrap automatically divides the row equally among `.col` elements.
+   b) With 3 `.col` divs, each takes 1/3 of the row width.
+
+9) Close all tags properly: close `row`, `container`, `body`, and `html`.
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .col{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+ <body>
+    <h3>
+        Equal width column grid
+    </h3>
+    <div class="container">
+        <div class="row">
+           <div class="col">
+            Column 1
+           </div>
+
+           <div class="col">
+            Column 2
+           </div>
+
+           <div class="col">
+            Column 3
+           </div>
+        </div>
+    </div>
+ </body>
+</html>

@@ -1,0 +1,44 @@
+<!--
+1) Start the HTML document with `<!DOCTYPE html>` to indicate an HTML5 page.
+
+2) Open the `<html>` tag to wrap the entire webpage.
+
+3) Inside the `<head>` section:
+   a) Set the page title using `<title>Bootstrap Example</title>`.
+   b) Link an external CSS file `style.css` (your custom styles).
+   c) Link Bootstrap 4.3.1 CSS using the CDN link.
+      (Bootstrap provides the grid system: container, row, col-* classes.)
+   d) Link Bootstrap 4.3.1 JavaScript using the CDN script tag.
+      (Note: grid layout works with CSS only; JS is needed for components like modals.)
+      (Also, Bootstrap 4 JS components normally need jQuery + Popper, but this page only demonstrates the grid.)
+
+4) Inside the `<body>` section:
+   a) Create a `<div class="container">`:
+      - Centers the content and adds responsive padding.
+
+5) Add basic content:
+   a) `<h1>` heading: "Hello Students!"
+   b) `<p>` paragraph: "Resize the browser window to see the effect."
+
+6) Create the first grid row using `<div class="row">`:
+   a) Add two columns inside the row.
+   b) Each column uses Bootstrap column classes to control width at different breakpoints.
+   c) Inline styles are used for background colors and borders to visually separate columns.
+
+   NOTE (important for learning):
+   - In Bootstrap 4, `col-xs-*` is NOT used. Use `col-*` instead (example: `col-4`, `col-6`).
+   - You have `col-md-12 col-md-5` together on the same div; typically you would keep only `col-md-5`.
+
+7) Create the second grid row using `<div class="row">`:
+   a) Add two columns with different sizing rules for medium and large screens.
+   b) Inline background colors are used to make layout changes visible.
+
+8) Create the third grid row using `<div class="row" style="background-color:lightcyan;">`:
+   a) This row demonstrates two equal columns for extra-small sizing.
+   b) Two `<div class="col-xs-6">` elements are used.
+   NOTE: In Bootstrap 4, replace `col-xs-6` with `col-6`.
+
+9) Close all tags properly:
+   a) Close the container.
+   b) Close body and html.
+-->
