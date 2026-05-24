@@ -1,61 +1,63 @@
-<!DOCTYPE html>
-<html> 
-    <head> 
-      <title> Html elements </title>  
-    </head>
-    <body> 
-        <h1>Heading 1</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h4>Heading 4</h4>
-        <h5>Heading 5</h5>
-        <h6>Heading 6</h6>
-        <p> The p tag is used to represent a paragraph</p>
+<!doctype html>
+<html lang="en">
 
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-         <b> Bold text tag</b>
-         <br> <br>
-         <strong> Bold tag with extra importance</strong>
-         <br> <br>
-         <i> italicized text</i>
-         <br> <br>
-         <em>Emphasized text</em>
-         <br> <br>
-         <mark>Marked text</mark>
-         <br> <br>
-         <small>Text is smaller</small>
-         <br> <br> 
-         <del> Removed text</del>
-         <br> <br> 
-         H<sub>2</sub>O
-        <br> <br> 
-        A<sup>3</sup>
-        <br> <br>
-        <blockquote>This is blockquote tag</blockquote>
-        <br> <br>
-        <q> sunrises in the east </q>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            body{
+                background-color:blueviolet;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                text-align:center;
+                padding: 30px;
+                font-size: 20px;
+            }
+            h2{ color:chocolate; margin-top: 25px;}
+            abbr{ color:crimson; font-weight: bold; cursor: help; }
+            blockquote{
+                border-left: 4px solid chocolate;
+                padding-left: 15px;
+                color: dimgrey;
+                font-style: italic;
+                text-align: left;
+                display: inline-block;
+            }
+            hr{ border-color:chocolate;}
 
+        </style>
+</head>
 
+<body>
+    <div class="container">
+        <h1>Bootstrap Typography</h1>
+        <p class="display-1">My Food Diary</p>
+        <p class="display-2">My Top Dishes</p>
+        <p class="display-3">Fun Food Facts</p>
+        <p class="display-4">Food guide <small>by Manish</small></p>
 
+        <hr>
+        <h2>Did you know?</h2>
+        <p>Pizza is the <mark>most popular</mark>food ordered by kids around the world.</p>
+        <p> It takes about 30 minutes to bake a perfect homemade pizza. </p>
+        <hr>
+        <h2>Cooking Styles</h2>
+        <p>My favourite way to cook with family is good old <abbr title="barbecue">BBQ</abbr>
+            on a sunny day.</p>
+        <hr>
+        <h2>Food quotes</h2>
+        <blockquotes>
+            <p>"First we eat, then we do everything else."</p>
+            <p>- M.F.K. Fisher</p>
+        </blockquotes>
 
-        <h1> Manish Introduction</h1>
-        
-        <blockquote> 
-        <i> 
-            My name is Manish, and I am 13 years old.
-            <br> <br> 
-            I live on 8-10 Marsh Street New Town, Tasmania 
-            <br> <br> 
-            <small> 
-                My favorite subjects are Maths, English, Science, and Health and Physical Education.
-                <br> <br>
-            </small>
-            <q> 
-                Life does not have to be peaceful to be wonderful.
-            </q>
-        </i>
-        </blockquote>
+    </div>
 
+</body>
 
-    </body>
 </html>
